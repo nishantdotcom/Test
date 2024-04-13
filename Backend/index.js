@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const port = process.env.PORT || 3000;
 const cors = require("cors");
 app.use(
   cors({
@@ -142,6 +143,6 @@ app.get("/delete-todo/:id", async (req, res) => {
   });
 });
 
-app.listen(5000, () => {
-  console.log("Listning to port 5000");
+app.listen(port, () => {
+  console.log(`Listning to port${port}`);
 });
